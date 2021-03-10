@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Schedule.ControllerFiles.MainController">
+    <children>
+        <Label layoutX="287.0" layoutY="26.0" text="Ваше расписание" textFill="WHITE">
+            <font>
+                <Font name="Garamond" size="52.0" />
+            </font>
+        </Label>
+      <ImageView fitHeight="128.0" fitWidth="189.0" layoutX="65.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="464.0" AnchorPane.leftAnchor="64.8995147705078" AnchorPane.rightAnchor="576.7004852294922" AnchorPane.topAnchor="8.0">
+         <image>
+            <Image url="@../Assets/knute.png" />
+         </image>
+      </ImageView>
+        <Label layoutX="631.0" layoutY="60.0" prefHeight="62.0" prefWidth="71.0" text="KNUTE" textFill="LIMEGREEN">
+            <font>
+                <Font name="Garamond" size="18.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutY="151.0" prefHeight="491.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="151.0">
+         <children>
+            <BorderPane layoutX="150.0" layoutY="14.0" prefHeight="230.0" prefWidth="641.0" stylesheets="@../tableview.css" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="269.0" AnchorPane.topAnchor="14.0">
+               <center>
+                  <TableView fx:id="TableSchedule" prefHeight="230.0" prefWidth="428.0" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="TableScheduleMonday" editable="false" prefWidth="85.60000610351562" resizable="false" sortable="false" text="Понедельник" />
+                      <TableColumn fx:id="TableScheduleTuesday" editable="false" prefWidth="71.99993896484375" resizable="false" sortable="false" text="Вторник" />
+                        <TableColumn fx:id="TableScheduleWednesday" editable="false" prefWidth="75.199951171875" resizable="false" sortable="false" text="Среда" />
+                        <TableColumn fx:id="TableScheduleThursday" editable="false" prefWidth="70.4000244140625" resizable="false" sortable="false" text="Четверг" />
+                        <TableColumn fx:id="TableScheduleFriday" editable="false" prefWidth="75.0" resizable="false" sortable="false" text="Пятница" />
+                    </columns>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </center>
+            </BorderPane>
+            <BorderPane layoutX="56.0" layoutY="44.0" prefHeight="271.0" prefWidth="94.0" stylesheets="@../tableview.css">
+               <center>
+                  <TableView fx:id="TableTime" cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="222.0" prefWidth="94.0" scaleShape="false" BorderPane.alignment="CENTER">
+                     <columns>
+                        <TableColumn editable="false" prefWidth="102.39996337890625" sortable="false" text="8:20 - 9:40">
+                           <columns>
+                              <TableColumn editable="false" prefWidth="75.0" sortable="false" text="10:05 - 11:25">
+                                 <columns>
+                                    <TableColumn editable="false" prefWidth="75.20001220703125" sortable="false" text="12:05 - 13:25">
+                                       <columns>
+                                          <TableColumn editable="false" prefWidth="75.0" sortable="false" text="13:50 - 15:10">
+                                             <columns>
+                                                <TableColumn editable="false" prefWidth="75.0" sortable="false" text="15:25 - 16:45">
+                                                   <columns>
+                                                      <TableColumn editable="false" prefWidth="75.0" sortable="false" text="17:00 - 18:20">
+                                                         <columns>
+                                                            <TableColumn editable="false" prefWidth="75.0" sortable="false" text="18:30 - 19:50" />
+                                                         </columns>
+                                                      </TableColumn>
+                                                   </columns>
+                                                </TableColumn>
+                                             </columns>
+                                          </TableColumn>
+                                       </columns>
+                                    </TableColumn>
+                                 </columns>
+                              </TableColumn>
+                           </columns>
+                        </TableColumn>
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </center>
+            </BorderPane>
+            <BorderPane layoutX="14.0" layoutY="44.0" prefHeight="271.0" prefWidth="42.0" stylesheets="@../tableview.css">
+               <center>
+                  <TableView fx:id="TableNumber" cacheShape="false" centerShape="false" focusTraversable="false" prefHeight="271.0" prefWidth="54.0" scaleShape="false">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <columns>
+                        <TableColumn editable="false" prefWidth="102.39996337890625" sortable="false" text="1">
+                           <columns>
+                              <TableColumn editable="false" prefWidth="75.0" sortable="false" text="2">
+                                 <columns>
+                                    <TableColumn editable="false" prefWidth="75.20001220703125" sortable="false" text="3">
+                                       <columns>
+                                          <TableColumn editable="false" prefWidth="75.0" sortable="false" text="4">
+                                             <columns>
+                                                <TableColumn editable="false" prefWidth="75.0" sortable="false" text="5">
+                                                   <columns>
+                                                      <TableColumn editable="false" prefWidth="75.0" sortable="false" text="6">
+                                                         <columns>
+                                                            <TableColumn editable="false" prefWidth="75.0" sortable="false" text="7" />
+                                                         </columns>
+                                                      </TableColumn>
+                                                   </columns>
+                                                </TableColumn>
+                                             </columns>
+                                          </TableColumn>
+                                       </columns>
+                                    </TableColumn>
+                                 </columns>
+                              </TableColumn>
+                           </columns>
+                        </TableColumn>
+                     </columns>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </TableView>
+                   
+               </center>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </BorderPane>
+         </children></AnchorPane>
+    </children>
+</AnchorPane>
