@@ -41,11 +41,6 @@ public class MainController {
     @FXML
     private TableColumn<AllSubjectsTable, String> TableScheduleFriday;
 
-    @FXML
-    private TableView<?> TableTime;
-
-    @FXML
-    private TableView<?> TableNumber;
     AllSubjectsTable allSubjectsTable;
 
     @FXML
