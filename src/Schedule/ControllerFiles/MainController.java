@@ -13,7 +13,6 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Calendar;
 import java.util.ResourceBundle;
 
 public class MainController {
@@ -25,7 +24,7 @@ public class MainController {
     private URL location;
 
     @FXML
-    private TableView<AllSubjectsTable> TableSchedule = new TableView<AllSubjectsTable>();
+    private TableView<AllSubjectsTable> TableSchedule = new TableView<>();
 
     @FXML
     private TableColumn<AllSubjectsTable, String> TableScheduleMonday;
@@ -73,27 +72,6 @@ public class MainController {
             allSubjectsTable = new AllSubjectsTable(set.getString("monday"), set.getString("tuesday"), set.getString("wednesday"),
                     set.getString("thursday"), set.getString("friday"));
             observableList.add(allSubjectsTable);
-        }
-        Calendar c = Calendar.getInstance();
-        Integer dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
-        switch (dayOfWeek){
-            case(2):
-                TableScheduleMonday.setStyle("-fx-background-color: #2E3348");
-                break;
-            case(3):
-                TableScheduleTuesday.setStyle("-fx-background-color:white");
-                break;
-            case(4):
-                TableScheduleWednesday.setStyle("-fx-background-color:white");
-                break;
-            case(5):
-                TableScheduleThursday.setStyle("-fx-background-color:white");
-                break;
-            case(6):
-                TableScheduleFriday.setStyle("-fx-background-color:white");
-                break;
-            default:
-                break;
         }
         TableSchedule.setItems(observableList);
     }
